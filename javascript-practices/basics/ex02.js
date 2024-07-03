@@ -23,6 +23,23 @@
  *      4. null
  * - function
  */
+
+/**
+ * 자바스크립트의 객체를 분류하는 또 다른 방법
+ * 1. 내장 객체
+ *   - 자바스크립트 엔젠 내부에 미리 내장(정의)되어 있는 객체
+ *   - Number, Boolean, Date, RegDate, Array, ... : 생성자 함수
+ *   - parseInt, setTimeout, setInterval, ... : 일반 함수
+ *
+ * 2. 호스트 객체
+ *   - 자바스크립트 엔진이 embed 되어 있는 호스트 환경에 있는 객체
+ *   - browser 호스트: screen, location, navigator, document(DOM), XmlHttpRequest, ... -> FRONT_END Programming
+ *   - Node 호스트: http, os, fs, path, process, ...                                   -> BACK_END Programming
+ * 
+ * 3. 사용자 객체
+ *   - 자바스크립트 엔진이 코들르 실행하면서 생성되는 객체
+ *   - 
+ */
 console.log("=== 기본타입(undefined, number, string, boolean) ===");
 var u; // var u = undefined; 와 동일 -> 자바스크립트는 선언과 정의가 구분이 없다 !!!
 var i = 10.7;

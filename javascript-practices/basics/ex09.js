@@ -10,5 +10,18 @@ var MyObject = function(name, age) {
 MyObject.prototype.school = "bitacademy";
 MyObject.prototype.course = "poscodx 8기";
 MyObject.prototype.info = function() {
-    console.log(this.school + " : " + this.course);
+    console.log(this.name + " : " + this.age + " : " + this.school + " : " + this.course);
 };
+
+// MyObject 인스턴스 생성 1
+var o1 = new MyObject("둘리", 10);
+o1.info();
+o1.school = 'poscodx';
+o1.info();
+
+// MyObject 인스턴스 생성 2
+var o2 = new MyObject("마이콜", 20);
+o2.info = function() {
+    console.log("안 알려줌 ~~ 비밀 !");
+};
+o2.info();

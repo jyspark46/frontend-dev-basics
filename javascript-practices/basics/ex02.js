@@ -38,7 +38,6 @@
  * 
  * 3. 사용자 객체
  *   - 자바스크립트 엔진이 코들르 실행하면서 생성되는 객체
- *   - 
  */
 console.log("=== 기본타입(undefined, number, string, boolean) ===");
 var u; // var u = undefined; 와 동일 -> 자바스크립트는 선언과 정의가 구분이 없다 !!!

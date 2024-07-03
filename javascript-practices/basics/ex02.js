@@ -24,7 +24,7 @@
  * - function
  */
 console.log("=== 기본타입(undefined, number, string, boolean) ===");
-var u;
+var u; // var u = undefined; 와 동일 -> 자바스크립트는 선언과 정의가 구분이 없다 !!!
 var i = 10.7;
 var s = 'hello world';
 var b = true;

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.onload = function() {
+	setTimeout(function() {
+		var imgElement = document.createElement('img');
+		
+		/*
+			getAttribute / setAttribute
+			-> 표준 속성에 대해서 읽기/쓰기도 가능하지만
+			-> 비표준 속성에 대해서 읽기/쓰기를 하기 위해 사용
+		*/
+		
+		imgElement.setAttribute('src', 'https://www.svkoreans.com/data/file/board_free/1225729979_WPMp0aGr_8a1476d32d8c378d908fe1c2c59fcf2393892f2f.gif');
+		imgElement.setAttribute('style', 'width = 200px');
+		imgElement.setAttribute('alt', '쿼카 만세 !');
+		imgElement.setAttribute('title', '쿼카 만세 ~~~');
+		imgElement.setAttribute('no', 10); // 비표준 속성 -> 이를 사용하려면 "data-"를 prefix로 붙여 사용 -> data-no
+		
+		console.log(imgElement.no, imgElement.getAttribute('no'), imgElement.alt);
+		document.body.appendChild(imgElement);
+	}, 2000);
+}
+</script>
+</head>
+<body>
+	<h1>DOM(Document Object Model)</h1>
+	<h2>3. HTML Element 속성 조작하기2</h2>
+</body>
+</html>

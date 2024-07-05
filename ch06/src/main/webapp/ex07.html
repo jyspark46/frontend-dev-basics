@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.onload = function() {
+	setTimeout(function() {
+		var htmls = "<h3>Hello DOM</h3>";
+		// <body> 전체를 대체
+		//document.body.innerHTML = htmls;
+		
+		// 기존 <body>에 추가
+		document.body.innerHTML = document.body.innerHTML + htmls; 
+	}, 2000);
+}
+</script>
+</head>
+<body>
+	<h1>DOM(Document Object Model)</h1>
+	<h2>2. HTML Element 추가2</h2>
+</body>
+</html>

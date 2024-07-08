@@ -11,4 +11,30 @@ public class ApiTestController {
 	public String text() {
 		return "text";
 	}
+	
+	@RequestMapping("/html")
+	public String html() {
+		return "html";
+	}
+
+	@RequestMapping("/json1")
+	public String json1() {
+		return "json1";
+	}
+
+	@RequestMapping("/json2")
+	public String json2() {
+		return "json2";
+	}
+	
+	@RequestMapping("/json3")
+	public String json3() {
+		return "json3";
+	}
+	
+	// json4: 진짜 그냥 참고용...
+	@RequestMapping("/json4")
+	public String json4() {
+		return "json4";
+	}
 }

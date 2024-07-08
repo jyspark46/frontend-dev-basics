@@ -11,13 +11,13 @@
 <script>
 $(function() {
 	$('button').click(function() {
-		$('#data').load('/ch08/api/text');	
+		$('#data').load('/ch08/api/html h1');	
 	});
 });
 </script>
 </head>
 <body>
-	<h1>Ajax Test: Text Format Data</h1>
+	<h1>Ajax Test: HTML Format Data</h1>
 	<button>데이터 가져오기</button>
 	<div id="data"></div>
 </body>

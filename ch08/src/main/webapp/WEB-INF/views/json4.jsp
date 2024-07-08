@@ -10,14 +10,14 @@
 <script>
 // DOM Load Event
 // 1. load: DOM, CSSOM, Image 모두 다 로딩
-// 2. DOMContentLoadedL DOM만 로딩
+// 2. DOMContentLoaded: DOM만 로딩
 
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function(){
 	document
 		.getElementsByTagName('button')[0]
-		.addEventListener('click', function() {
+		.addEventListener('click', function(){
 			var xhr = new XMLHttpRequest();
-			xhr.addEventListener('readstatechange', function() {
+			xhr.addEventListener('readystatechange', function(){
 				if(this.readyState === XMLHttpRequest.UNSET) { // readyState: 0
 					/* request가 초기화 되기 전 */
 					console.log('XMLHttpRequest.UNSET');
@@ -34,13 +34,18 @@ window.addEventListener('DOMContentLoaded', function() {
 					/* response 처리가 끝났음 */
 					console.log('XMLHttpRequest.DONE');
 				
-					if(this.status != 200) {
+					if(this.status !== 200){
 						console.error(this.status, this.state);
 						return;
 					}
 					
-					console.log(this.response.text);
-					var response = JSON.parse(this.response.text);
+					// console.log(this.responseText);
+					var response = JSON.parse(this.responseText);
+					
+					if(response.result !== 'success') {
+						console.error(response.message);
+						return;
+					}
 					
 					var vo = response.data;
 					
@@ -50,10 +55,10 @@ window.addEventListener('DOMContentLoaded', function() {
 					htmls += ("<h5>" + vo.contents + "</h5>");
 					
 					document.getElementById("data").innerHTML = htmls;
-				} 
+				}    
 			});
 			
-			xhr.open('get', '/ch08/api/json', true /* async */);
+			xhr.open('get', '/ch08/api/json', true/*async*/);
 			xhr.send();
 		});
 });

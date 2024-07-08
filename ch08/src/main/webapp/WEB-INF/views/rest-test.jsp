@@ -30,13 +30,11 @@ $(function() {
 		});
 	});
 	
-	$("#read").click(function() {
+	$("#read").click(function(){
 		$.ajax({
 			url: '/ch08/api/user',
-			type: 'post',
+			type: 'get',
 			dataType: 'json',
-			contentType: 'application/json',
-			data: JSON.stringify(vo),
 			success: function(response) {
 				console.log(response);
 			}
